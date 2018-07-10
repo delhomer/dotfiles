@@ -1,0 +1,96 @@
+# -*- mode: sh -*-
+
+# ~/.bash_aliases, executed with ~/.bashrc
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# source bashrc file
+alias sbrc='source ~/.bashrc'
+
+### ssh connexions ###
+alias hekla="rde@ns379426.ip-37-187-164.eu"
+alias shekla="ssh rde@ns379426.ip-37-187-164.eu"
+alias olympus="rde@ns3044290.ip-37-59-21.eu"
+alias solympus="ssh rde@ns3044290.ip-37-59-21.eu"
+alias merapi="rde@lyon.oslandia.net"
+alias smerapi="ssh rde@lyon.oslandia.net -p 2299"
+
+### Terminal ###
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias ll='ls -ahl'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+### Git ###
+alias tiga='tig --all'
+alias gitka='gitk --all'
+
+### apt-get ###
+alias apti='sudo apt-get install'
+alias aptud='sudo apt-get update'
+alias aptug='sudo apt-get upgrade'
+alias aptr='sudo apt-get remove'
+alias aptse='apt-cache search'
+alias aptsh='apt-cache show'
+
+### pip ###
+alias pip='pip3'
+alias pips='pip search'
+alias pipi='pip install'
+alias pipup='pip install --upgrade'
+alias pupi='pip install --user '
+alias pupup='pip install --user --upgrade '
+
+### grep ###
+alias grep='grep --color=auto'
+
+### Keyboard layouts ###
+alias kus='setxkbmap us'
+alias kfr='setxkbmap fr'
+
+### emacs ###
+alias ee='emacs &' # Launch emacs client
+alias e='emacsclient -n' # Display a file in the opened emacs client
+alias ge='emacs -nw -Q' # Launch a new emacs in the terminal
+
+### Tmux ###
+alias tmn='tmux new-session -s '
+alias tma='tmux attach-session -t '
+alias tmk='tmux kill-session -t '
+alias tml='tmux list-session '
+
+### python ###
+alias py='python3'
+alias python='python3'
+alias pypath='python -c "import sys; import pprint; pprint.pprint(sys.path)"'
+alias ipy='ipython'
+alias jnb='jupyter notebook --matplotlib=inline'
+
+### virtualenv ###
+alias mkve='mkvirtualenv -p /usr/bin/python3'
+alias mkve2='mkvirtualenv -p /usr/bin/python2'
+alias lsve='lsvirtualenv'
+alias rmve='rmvirtualenv'
+alias off='deactivate'
+
+# For make, C style compliant. It's useful to use colorgcc. UTF-8 encoding has
+# not been supported by the Perl script colorgcc yet (where code is between
+# ticks).
+alias make='LC_CTYPE=C make'
+
+# Misc
+alias dust='du --max-depth=1 -x --block-size=1048576 | sort -nr'
+alias meteo='curl -4 http://wttr.in/Giverny'
+alias http='http -v --style monokai'
