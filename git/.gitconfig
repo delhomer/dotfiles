@@ -1,0 +1,44 @@
+[user]
+	name = Raphaël Delhome
+	email = raphael.delhome@oslandia.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = always
+[core]
+	pager = less
+	attributesfile = /home/rde/.gitattributes
+[pager]
+	status = true
+[push]
+	default = simple
+[pull]
+	rebase = preserve
+[fetch]
+	prune = true
+[alias]
+	st = status
+	a = add
+	ap = add -p
+	ci = commit
+	ca = commit --amend
+	cf = commit --fixup
+	cm = commit --message
+	br = branch
+	co = checkout
+	cob = checkout -b
+	d = diff
+	dc = diff --cached
+	dw = diff --color-words
+	l = log
+	lt = log --graph --oneline --decorate --all
+	f = fetch
+	fp = fetch --prune
+	r = rebase
+	ra = rebase --abort
+	rc = rebase --continue
+	ri = rebase --interactive
+[diff "odf"]
+	textconv = odt2txt
