@@ -18,11 +18,11 @@ alias sbrc='source ~/.bashrc'
 
 ### ssh connexions ###
 alias hekla="rde@ns379426.ip-37-187-164.eu"
-alias shekla="ssh rde@ns379426.ip-37-187-164.eu"
+alias shekla="ssh rde@ns379426.ip-37-187-164.eu -o TCPKeepAlive=yes"
 alias olympus="rde@ns3044290.ip-37-59-21.eu"
-alias solympus="ssh rde@ns3044290.ip-37-59-21.eu"
+alias solympus="ssh rde@ns3044290.ip-37-59-21.eu -o TCPKeepAlive=yes"
 alias merapi="rde@lyon.oslandia.net"
-alias smerapi="ssh rde@lyon.oslandia.net -p 2299"
+alias smerapi="ssh rde@lyon.oslandia.net -p 2299 -o TCPKeepAlive=yes"
 
 ### Terminal ###
 alias ..='cd ..'
@@ -72,9 +72,10 @@ alias tmk='tmux kill-session -t '
 alias tml='tmux list-session '
 
 ### python ###
-alias py='python3'
-alias python='python3'
+alias py3='python3'
+alias py2='python2'
 alias pypath='python -c "import sys; import pprint; pprint.pprint(sys.path)"'
+alias ipython='ipython3'
 alias ipy='ipython'
 alias jnb='jupyter notebook --matplotlib=inline'
 

@@ -129,3 +129,6 @@ fi
 if [ -f ${HOME}/.bash_functions ]; then
     . ${HOME}/.bash_functions
 fi
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
